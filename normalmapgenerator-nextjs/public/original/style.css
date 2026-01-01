@@ -1,0 +1,400 @@
+/* NormalMap-Online - Matching Original Layout */
+:root {
+	--bg: #1a2634;
+	--card: #1e2d3d;
+	--input: #2a3a4a;
+	--accent: #3bbcd0;
+	--accent2: #2aa0b0;
+	--text: #ffffff;
+	--text2: #a0b0c0;
+	--border: #3a4a5a;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	font-family: 'Open Sans', 'Segoe UI', sans-serif;
+	background: var(--bg);
+	color: var(--text);
+	font-size: 13px;
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	padding: 15px;
+	background: linear-gradient(180deg, #1a2634 0%, #0f1820 100%);
+}
+
+/* Hide toggle buttons only */
+.column_btn {
+	display: none;
+}
+
+a[href="#normalmaponline_help"] {
+	display: none;
+}
+
+/* Main layout - 3 columns */
+.content {
+	display: flex !important;
+	gap: 10px;
+	height: calc(100% - 0px);
+	justify-content: center;
+}
+
+/* Columns */
+.column {
+	background: transparent;
+	border: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+#column_height {
+	width: 220px;
+	flex-shrink: 0;
+}
+
+#preview {
+	width: 280px;
+	flex-shrink: 0;
+}
+
+/* Settings area at top */
+.column_top {
+	background: rgba(30, 45, 61, 0.8);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	padding: 12px;
+	margin-bottom: 10px;
+}
+
+/* Options table */
+.options_top {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0 6px;
+}
+
+.option_text {
+	padding: 0 12px 0 0;
+	color: var(--text);
+	font-size: 13px;
+	font-weight: 400;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+
+.options {
+	padding: 0;
+	vertical-align: middle;
+}
+
+/* Sliders - teal style matching original */
+input[type="range"] {
+	-webkit-appearance: none;
+	appearance: none;
+	height: 8px;
+	background: #1a2530;
+	border-radius: 4px;
+	cursor: pointer;
+	border: 1px solid #2a3a48;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 16px;
+	height: 16px;
+	background: var(--accent);
+	border-radius: 50%;
+	cursor: pointer;
+	border: 2px solid #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Number inputs */
+input[type="number"],
+input[type="text"] {
+	background: #1a2530;
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	color: var(--text);
+	padding: 6px 8px;
+	font-size: 12px;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+	border-color: var(--accent);
+	outline: none;
+}
+
+input[type="number"] {
+	width: 50px;
+	text-align: center;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 16px;
+	height: 16px;
+	background: #1a2530;
+	border: 2px solid var(--accent);
+	border-radius: 3px;
+	cursor: pointer;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+	background: var(--accent);
+}
+
+input[type="checkbox"]:checked::after {
+	content: '✓';
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-size: 11px;
+	line-height: 12px;
+}
+
+/* Selects */
+select {
+	background: #1a2530;
+	border: 1px solid var(--border);
+	border-radius: 4px;
+	color: var(--text);
+	padding: 6px 24px 6px 10px;
+	font-size: 12px;
+	-webkit-appearance: none;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10'%3E%3Cpath fill='%23a0b0c0' d='M5 7L1 3h8z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 8px center;
+}
+
+/* Buttons */
+button,
+input[type="button"] {
+	background: var(--accent);
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	padding: 8px 16px;
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+button:hover,
+input[type="button"]:hover {
+	background: var(--accent2);
+}
+
+.download {
+	background: var(--accent);
+	font-weight: 700;
+}
+
+#download_all {
+	background: transparent;
+	border: 1px solid var(--border);
+}
+
+/* Tabs */
+.tabs {
+	display: flex;
+	gap: 2px;
+	margin-bottom: 8px;
+}
+
+.tab_button {
+	flex: 1;
+	background: #1a2530 !important;
+	border: 1px solid var(--border) !important;
+	border-radius: 4px !important;
+	color: var(--text2) !important;
+	padding: 8px 10px !important;
+	font-size: 12px !important;
+	font-weight: 500 !important;
+}
+
+.tab_button:disabled {
+	background: var(--accent) !important;
+	color: #fff !important;
+	border-color: var(--accent) !important;
+}
+
+/* View containers */
+.view {
+	background: rgba(20, 30, 40, 0.6);
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	min-height: 0;
+	position: relative;
+}
+
+.view canvas {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#height_map {
+	background: #0f1820;
+	min-height: 200px;
+}
+
+/* Normal map purple-blue background */
+#normal_map {
+	background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+}
+
+#render_view {
+	background: #080c10;
+}
+
+.texture_container {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-height: 0;
+}
+
+/* Pictures grid */
+.pictures_view {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 4px;
+	height: 100%;
+	padding: 5px;
+}
+
+.pictures_view_row {
+	display: contents;
+}
+
+.pictures_view_cell {
+	background: #1a2530;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--text2);
+}
+
+.drop_cell {
+	border: 2px dashed var(--border);
+	cursor: pointer;
+}
+
+.drop_cell:hover {
+	border-color: var(--accent);
+}
+
+/* Labels */
+label {
+	font-size: 12px;
+	color: var(--text);
+	margin-right: 10px;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+}
+
+/* Size display */
+div:has(>#size) {
+	margin-top: 8px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+#size {
+	font-size: 12px;
+	color: var(--text2);
+}
+
+/* Download area */
+#file_jpg_qual,
+#total_transparency {
+	font-size: 11px;
+	color: var(--text2);
+	margin: 5px 0;
+}
+
+/* Help links - style but keep */
+a[href*="help"] img,
+a[href*="attention"] img {
+	width: 20px;
+	height: 20px;
+	opacity: 0.7;
+}
+
+a[href*="help"]:hover img {
+	opacity: 1;
+}
+
+/* Drag drop image */
+img[src*="drag_drop"] {
+	opacity: 0.6;
+	max-width: 150px;
+}
+
+/* 3D Preview title */
+#preview .column_top td[colspan="2"] {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+/* Render magnifier */
+.render_magnifier {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 4px;
+	border-radius: 4px;
+}
+
+.render_magnifier img {
+	width: 16px;
+	height: 16px;
+}
+
+/* Feedback section - hide email only */
+p:has(>img[src*="email"]) {
+	display: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: #1a2530;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--border);
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--accent);
+}

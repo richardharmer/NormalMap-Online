@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Normal Map Generator | Common Questions Answered</title>
+    <meta name="description"
+        content="Frequently asked questions about normal map generation, Unity normal maps, Unreal Engine textures, and 3D game development.">
+    <link rel="canonical" href="https://normalmapgenerator.io/faq.html">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .faq-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            border-radius: 5px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .faq-answer {
+            color: #555;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-link:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="faq-container">
+        <h1>Frequently Asked Questions (FAQ)</h1>
+        <p>Find answers to common questions about our normal map generator and 3D texture creation.</p>
+
+        <h2>基础问题 (Basic Questions)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 什么是法线贴图(Normal Map)?</div>
+            <div class="faq-answer">
+                A: 法线贴图是一种纹理贴图,用于在不增加模型几何复杂度的情况下为3D表面添加细节。它通过存储表面法线方向信息来模拟凹凸和细节,是现代游戏开发中必不可少的技术。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: What is a normal map generator?</div>
+            <div class="faq-answer">
+                A: A normal map generator is a tool that creates normal maps from height maps, textures, or photos.
+                Normal maps add surface detail to 3D models without increasing geometry complexity, making them
+                essential for games and 3D graphics. Our online normal map generator creates high-quality results
+                instantly in your browser.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 法线贴图如何工作?</div>
+            <div class="faq-answer">
+                A: 法线贴图通过改变光照计算中的表面法线方向来工作。每个像素的RGB值代表法线向量的X、Y、Z分量。蓝色通道(Z)通常占主导,因为大多数法线指向表面外部。
+            </div>
+        </div>
+
+        <h2>使用问题 (Usage Questions)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: How to make a normal map from texture or height map?</div>
+            <div class="faq-answer">
+                A: To make a normal map:
+                <ol>
+                    <li>Upload your texture or height map (grayscale works best)</li>
+                    <li>Adjust the strength (2.0-3.0 recommended) and blur settings</li>
+                    <li>Preview the result in real-time 3D viewer</li>
+                    <li>Download your normal map as PNG or TGA</li>
+                </ol>
+                Our generator supports common formats like PNG, JPG, and TGA files.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: How do I use this normal map generator for Unity?</div>
+            <div class="faq-answer">
+                A: For Unity normal maps:
+                <ol>
+                    <li>Upload your height map to our generator</li>
+                    <li>Set the strength between 2-4 for best results</li>
+                    <li>Ensure "Invert G" is unchecked (Unity uses OpenGL format)</li>
+                    <li>Download as PNG format</li>
+                    <li>In Unity, import the texture and set the texture type to "Normal Map"</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 如何在Unreal Engine中使用法线贴图?</div>
+            <div class="faq-answer">
+                A: 在Unreal Engine中:
+                <ol>
+                    <li>生成法线贴图时勾选"Invert G"(Unreal使用DirectX格式)</li>
+                    <li>下载为PNG或TGA格式</li>
+                    <li>在UE中导入,纹理类型会自动识别为Normal Map</li>
+                    <li>在材质编辑器中连接到Normal输入</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: Can I create normal maps online for free?</div>
+            <div class="faq-answer">
+                A: Yes! Our free normal map online generator converts any texture to a normal map online. Simply drag
+                your texture file into the normal map online generator, adjust the intensity settings, and download the
+                converted normal map online. Works with photos, hand-painted textures, and procedural textures.
+                Everything runs in your browser with no uploads required.
+            </div>
+        </div>
+
+        <h2>技术问题 (Technical Questions)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: DirectX vs OpenGL法线贴图有什么区别?</div>
+            <div class="faq-answer">
+                A: 主要区别在于绿色通道(Y轴)的方向:
+                <ul>
+                    <li><strong>OpenGL格式</strong>: Y轴向上(Unity, Blender使用)</li>
+                    <li><strong>DirectX格式</strong>: Y轴向下(Unreal Engine使用)</li>
+                </ul>
+                在我们的工具中,勾选"Invert G"即可在两种格式间切换。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: What is the difference between tangent space and object space normal maps?
+            </div>
+            <div class="faq-answer">
+                A:
+                <ul>
+                    <li><strong>Tangent Space</strong>: Most common, appears mostly blue/purple. Works with
+                        animated/deformed meshes. Our tool generates this type.</li>
+                    <li><strong>Object Space</strong>: Rainbow colored, only works with static meshes. Rarely used in
+                        modern games.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 最佳的法线贴图分辨率是多少?</div>
+            <div class="faq-answer">
+                A: 推荐分辨率:
+                <ul>
+                    <li><strong>移动游戏</strong>: 512x512 或 1024x1024</li>
+                    <li><strong>PC游戏</strong>: 2048x2048 或 4096x4096</li>
+                    <li><strong>电影级</strong>: 4096x4096 或更高</li>
+                </ul>
+                使用2的幂次方尺寸(512, 1024, 2048等)以获得最佳性能。
+            </div>
+        </div>
+
+        <h2>高级功能 (Advanced Features)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: How to convert normal map to height map?</div>
+            <div class="faq-answer">
+                A: While our primary function is creating normal maps, you can approximate a height map from a normal
+                map by:
+                <ol>
+                    <li>Using image editing software to extract the blue channel</li>
+                    <li>Applying blur to smooth the result</li>
+                    <li>Adjusting contrast for better definition</li>
+                </ol>
+                Note: This is an approximation and won't be as accurate as the original height map.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: How do I generate normal maps from photos (photogrammetry-style)?</div>
+            <div class="faq-answer">
+                A: Use our "Pictures" tab feature:
+                <ol>
+                    <li>Take 4 photos of the same surface with lighting from different directions (top, bottom, left,
+                        right)</li>
+                    <li>Upload each photo to the corresponding position in our tool</li>
+                    <li>Our algorithm calculates surface normals from lighting variations</li>
+                    <li>Adjust settings and download the result</li>
+                </ol>
+                Best results require consistent camera position (use a tripod) and controlled lighting.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 如何批量处理多个法线贴图?</div>
+            <div class="faq-answer">
+                A: 使用批处理模式:
+                <ol>
+                    <li>点击"Batch Mode"按钮</li>
+                    <li>选择多个高度图文件</li>
+                    <li>调整设置(将应用于所有文件)</li>
+                    <li>选择要生成的贴图类型(Normal, Displacement, AO, Specular)</li>
+                    <li>点击下载,所有贴图将自动生成并下载</li>
+                </ol>
+            </div>
+        </div>
+
+        <h2>隐私和安全 (Privacy & Security)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: Do my images get uploaded to any server?</div>
+            <div class="faq-answer">
+                A: <strong>No!</strong> This normal map generator runs entirely in your browser using WebGL technology.
+                Your images never leave your device, ensuring complete privacy and security for your game assets and
+                textures. All processing is done locally on your GPU.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 我的数据安全吗?</div>
+            <div class="faq-answer">
+                A: 绝对安全!所有处理都在您的浏览器中本地完成,使用WebGL和GPU加速。我们不会:
+                <ul>
+                    <li>上传您的图片到服务器</li>
+                    <li>存储您的数据</li>
+                    <li>追踪您的文件</li>
+                    <li>收集个人信息</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>文件格式 (File Formats)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: What file formats are supported?</div>
+            <div class="faq-answer">
+                A: We support:
+                <ul>
+                    <li><strong>Input</strong>: PNG, JPG, JPEG, BMP, GIF, TGA, and most common image formats</li>
+                    <li><strong>Output</strong>: PNG (recommended), JPG, TGA, TIFF</li>
+                </ul>
+                For best results, use high-resolution grayscale or color images as input.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 应该使用什么格式导出?</div>
+            <div class="faq-answer">
+                A: 推荐格式:
+                <ul>
+                    <li><strong>PNG</strong>: 无损压缩,最佳质量,Unity和UE都支持(推荐)</li>
+                    <li><strong>TGA</strong>: 无损,某些引擎首选</li>
+                    <li><strong>JPG</strong>: 有损压缩,文件小但质量降低(不推荐用于法线贴图)</li>
+                    <li><strong>TIFF</strong>: 专业用途,文件大</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>其他功能 (Other Features)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: Can I create displacement and AO maps too?</div>
+            <div class="faq-answer">
+                A: Absolutely! Our generator creates multiple map types from the same input:
+                <ul>
+                    <li><strong>Normal Maps</strong>: Surface detail simulation</li>
+                    <li><strong>Displacement Maps</strong>: Actual geometry displacement</li>
+                    <li><strong>Ambient Occlusion (AO) Maps</strong>: Soft shadows in crevices</li>
+                    <li><strong>Specular Maps</strong>: Highlight/glossiness control</li>
+                </ul>
+                Switch between different output types using the preview tabs.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 如何创建无缝/可平铺的法线贴图?</div>
+            <div class="faq-answer">
+                A: 要创建无缝法线贴图:
+                <ol>
+                    <li>确保输入的高度图本身是可平铺的</li>
+                    <li>在图像编辑软件中使用"Offset"滤镜检查边缘</li>
+                    <li>修复边缘不匹配的区域</li>
+                    <li>在我们的工具中生成法线贴图</li>
+                    <li>在3D预览中启用"Repeat"纹理模式验证</li>
+                </ol>
+            </div>
+        </div>
+
+        <h2>性能问题 (Performance)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 为什么3D预览显示黑屏?</div>
+            <div class="faq-answer">
+                A: 如果3D预览区域显示黑屏,可能是因为:
+                <ol>
+                    <li><strong>CORS问题</strong>:
+                        直接打开HTML文件会导致浏览器安全限制。解决方法:使用本地HTTP服务器(如<code>python -m http.server</code>)</li>
+                    <li><strong>WebGL不支持</strong>: 确保浏览器支持WebGL(Chrome、Firefox、Edge都支持)</li>
+                    <li><strong>GPU驱动问题</strong>: 更新显卡驱动程序</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: What browsers work best?</div>
+            <div class="faq-answer">
+                A: Recommended browsers:
+                <ul>
+                    <li><strong>Chrome</strong>: Best performance (recommended)</li>
+                    <li><strong>Firefox</strong>: Excellent support</li>
+                    <li><strong>Edge</strong>: Good performance</li>
+                    <li><strong>Safari</strong>: Works but slower</li>
+                </ul>
+                All browsers must support WebGL for the 3D preview to work.
+            </div>
+        </div>
+
+        <h2>还有其他问题? (More Questions?)</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">Q: 如何联系支持?</div>
+            <div class="faq-answer">
+                A: 如果您有其他问题或需要帮助:
+                <ul>
+                    <li>查看我们的<a href="/tutorials/">教程页面</a></li>
+                    <li>访问我们的<a href="/blog/">博客</a>获取更多技巧</li>
+                    <li>在GitHub上提交Issue</li>
+                    <li>发送邮件至支持团队</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="/" class="back-link">← 返回主页 / Back to Home</a>
+    </div>
+
+    <!-- Schema.org FAQ Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a normal map generator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A normal map generator is a tool that creates normal maps from height maps or photos. Normal maps add surface detail to 3D models without increasing geometry complexity, making them essential for games and 3D graphics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to make a normal map from texture?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To make a normal map: 1) Upload your texture or height map, 2) Adjust the strength and blur settings, 3) Preview the result in real-time, 4) Download your normal map. Our generator supports PNG, JPG, and TGA files."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this normal map generator free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Our normal map generator is completely free to use. All processing happens in your browser, and your images never leave your device."
+          }
+        }
+      ]
+    }
+    </script>
+</body>
+
+</html>
